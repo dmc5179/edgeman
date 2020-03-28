@@ -1,0 +1,6 @@
+---
+- name: Install container tools
+  hosts: "{{ hosts_to_apply }}"
+  roles:
+    - container_tools
+

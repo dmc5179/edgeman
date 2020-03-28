@@ -1,0 +1,15 @@
+---
+
+- name: Download and Install Skupper CLI
+  unarchive:
+    src: https://github.com/skupperproject/skupper-cli/releases/download/0.1.2/skupper-cli-{{ skupper-cli-version }}-linux-amd64.tgz
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: Set permissions and ownership of skupper cli command
+  file:
+    path: /usr/local/bin/skupper
+    owner: root
+    group: root
+    mode: '0755'
+

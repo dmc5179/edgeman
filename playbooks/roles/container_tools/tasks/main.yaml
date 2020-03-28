@@ -1,0 +1,10 @@
+---
+
+- name: Install Container Tools
+  yum:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - podman
+    - skopeo
+    - firewalld
